@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1vh;
+    background: #000;
+    overflow: hidden;
+  }
+
+  .container {
+    position: absolute;
+    top: 20%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    animation: fadeIn 1s ease-in-out;
+
+  }
+
+  .error-code1 {
+    font-size: 6rem;
+    color: #ccccd2; /*azul */
+    animation: bounce 1s infinite;
+    position: absolute; /*AQUI É PARA MIM DAR UMA POSIÇÃO ABSOLUTA A MINHA LETRA OU IMAGEM, MAS EU TENHO QUE USAR O TOP: LOGO ABAIXO*/
+    top: 30%; /*AQUI DIZ A POSIÇÃO DE ONDE VAI FICAR EM RELAÇÃO AO TOPO*/
+   
+}
+
+.error-code2 {
+  font-size: 5rem;
+  color: #ccccd2; /*azul */
+  animation: bounce 1s infinite;
+  position: absolute;
+  top: 45%;
+  
+}
+
+.error-code3 {
+  font-size: 2rem;
+  color: #ccccd2; /*azul */
+  animation: bounce 1s infinite;
+  position: absolute;
+  top: 58%;
+  
+}
+
+.error-code4 {
+  font-size: 2rem;
+  color: #ccccd2; /*azul */
+  animation: bounce 1s infinite;
+  position: absolute;
+  top: 68%;
+  
+}
+
+.duvidas {
+  text-align: center;
+  display: none;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #e42f0f;; /*azul */
+  animation: fadeIn 1s ease-in-out;
+  position: absolute;
+  top: 78%;
+  
+}
+
+.duvidas a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #491404;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;    
+}
+
+.duvidas a:hover {
+  background-color: #0818c9;
+}
+
+
+  .circle {
+    position: absolute;
+    background: transparent;
+    width: calc(var(--i) * 2.5vmin);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 255, 13);
+    transform-style: preserve-3d;
+    transform: rotateX(70deg) translateZ(50px);
+    animation: animate 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+    box-shadow: 0 0 15px rgb(124, 124, 124),
+                inset 0 0 15px rgb(124, 124, 124);
+  }
+
+  @keyframes animate {
+    0%, 100% {
+      transform: rotateX(70deg) translateZ(50px) translateY(0);
+      filter: hue-rotate(0);
+    }
+
+    50% {
+      transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+      filter: hue-rotate(360deg);
+    }
+  }
